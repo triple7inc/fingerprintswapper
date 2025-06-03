@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FingerprintSwapper - change your browser's fingerprint in a few clicks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            color:#f0f0f0;
+            background-color:#212121;
+            font-family:'Roboto',sans-serif
+        }
+        h1,h3{
+            font-family:'Montserrat',sans-serif
+        }
+        a,a:visited{
+            color:#ffff66;
+            text-decoration:none
+        }
+        a:hover,
+        a:focus{
+            color:#ffff66b9
+        }
+        pre{
+            padding:10px;
+            max-width:90vw;
+            text-align:left;
+            overflow-x:auto;
+            border-radius:5px;
+            display:inline-block;
+            white-space:pre-wrap;
+            word-wrap:break-word;
+            overflow-wrap:break-word
+        }
+        .centered-pre{
+            text-align:center
+        }
+        .center-list{
+            text-align:left;
+            display:inline-block
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5 text-center">
+        <h1 class="display-4 mb-4">FingerprintSwapper</h1>
+        <p class="lead">We’re currently building our comprehensive fingerprint dataset.<br>
+        You can help us by adding the following script tag to your website (preferably at the bottom of the body):</p>
+        <div class="centered-pre">
+            <pre class="my-4"><code class="language-html">&lt;script src="https://dex.mba/fingerprint/fp.js"
+    integrity="sha384-287XM3W+w9K09aZkbqczY30YFCYyjkLyGuNYK8QQmSCEfnl7ROdge4IE5gfRentc"
+    crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <p>By doing this, you contribute real-world fingerprint data that helps us make FingerprintSwapper better.</p>
+        
+        <h3 class="mt-5">Planned Support</h3>
+        <p>We plan to support the most popular frameworks, including:</p>
+        <div class="text-center">
+            <ul class="list-unstyled center-list">
+                <li>✅ Selenium (Python, Java, C#)</li>
+                <li>✅ Puppeteer (Node.js)</li>
+                <li>✅ Playwright (Node.js, Python, .NET)</li>
+                <li>✅ Cypress (JavaScript)</li>
+                <li>✅ WebDriverIO (Node.js)</li>
+                <li>✅ TestCafe (JavaScript)</li>
+            </ul>
+        </div>
+
+        <h3 class="mt-5">Continued Dataset Expansion</h3>
+        <p>Even after the official release, FingerprintSwapper will continue expanding its dataset by collecting data from links embedded in user websites and our own sources.</p>
+
+        <h3 class="mt-5">Always Free</h3>
+        <p>FingerprintSwapper will always be free for up to <strong>10 requests per second</strong> (this limit may change in the future). This is why we collect data and encourage others to help us build a robust, diverse fingerprint dataset. Together, we’re making an unbeatable fingerprint swapping tool — free, forever.</p>
+
+        <p>Stay tuned for the official release!</p>
+    </div>
+    <footer class="text-center py-3">
+        &copy; 2025 <a href="https://github.com/triple7inc" target="_blank">triple7inc</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://dex.mba/fingerprint/fp.js" integrity="sha384-287XM3W+w9K09aZkbqczY30YFCYyjkLyGuNYK8QQmSCEfnl7ROdge4IE5gfRentc" crossorigin="anonymous"></script>
+</body>
+</html>
