@@ -45,14 +45,23 @@
         p{
             padding:0 15%
         }
+        .tiny{
+            font-size:.6em;
+            margin-top:-9px;
+            text-transform:uppercase;
+        }
+        div.small{
+            margin-top:-24px
+        }
     </style>
 </head>
 <body>
     <div class="container py-5 text-center">
-        <h1 class="display-4 mb-4">FingerprintSwapper</h1>
+        <h1 class="display-4">FingerprintSwapper</h1>
+        <h1 class="tiny mb-4" id="stats">Fingerprints: 0 • Crawlers: 0</h1>
         <p class="lead">We’re currently building our comprehensive fingerprint dataset.<br>
         You can help us by adding the following script tag to your website:</p>
-        <div><small>(preferably at the bottom of the body)</small></div>
+        <div class="small"><small>(preferably at the bottom of the body)</small></div>
         <div class="centered-pre">
             <pre class="my-4"><code class="language-html">&lt;script src="https://dex.mba/fingerprint/fp.js"
     integrity="sha384-287XM3W+w9K09aZkbqczY30YFCYyjkLyGuNYK8QQmSCEfnl7ROdge4IE5gfRentc"
@@ -87,6 +96,17 @@
     <footer class="text-center py-3">
         &copy; 2025 <a href="https://github.com/triple7inc" target="_blank">triple7inc</a>
     </footer>
+    <script>
+        (async()=>{
+            fetch(atob("aHR0cHM6Ly9kZXgubWJhL2ZpbmdlcnByaW50L2ZwLnBocA"))
+            .then(r=>r.json()).then(R=>{
+                if(R&&R?.status&&R?.data){
+                    const e=document.getElementById("stats")
+                    e.innerText=`Fingerprints: ${(R.data?.fp||0).toLocaleString()} • Crawlers: ${(R.data?.bot||"0").toLocaleString()}`
+                }
+            })
+        })().then()
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     <script src="https://dex.mba/fingerprint/fp.js" integrity="sha384-287XM3W+w9K09aZkbqczY30YFCYyjkLyGuNYK8QQmSCEfnl7ROdge4IE5gfRentc" crossorigin="anonymous"></script>
 </body>
