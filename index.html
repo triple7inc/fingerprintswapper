@@ -98,6 +98,7 @@
     </footer>
     <script>
         (async()=>{
+            const F=()=>
             fetch(atob("aHR0cHM6Ly9kZXgubWJhL2ZpbmdlcnByaW50L2ZwLnBocA"))
             .then(r=>r.json()).then(R=>{
                 if(R&&R?.status&&R?.data){
@@ -105,6 +106,8 @@
                     e.innerText=`Fingerprints: ${(R.data?.fp||0).toLocaleString()} • Crawlers: ${(R.data?.bot||"0").toLocaleString()}`
                 }
             })
+            F()
+            setInterval(F,1E4)
         })().then()
     </script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
